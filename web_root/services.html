@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Big+Shoulders+Display:wght@700;800&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Caveat:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Special+Elite&amp;display=swap">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
@@ -22,89 +22,142 @@
 
 <header class="site-header">
   <div class="container bar">
-    <a href="/" class="brand"><img src="/assets/hyams-logo.png" alt="Hyams Auto" width="200" height="104"></a>
+    <a href="/" class="brand" aria-label="Hyams Auto home"><img src="/assets/hyams-logo.png" alt="Hyams Auto" width="200" height="104"></a>
     <nav class="nav" aria-label="Primary">
       <a href="/">Home</a>
       <a href="/services">Services</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
     </nav>
-    <a href="tel:+15137954171" class="header-cta"><span aria-hidden="true">&#128222;</span> (513) 795-4171</a>
-    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <a href="tel:+15137954171" class="header-cta" aria-label="Call (513) 795-4171">
+      <svg class="svgi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72a2 2 0 0 1 1.72 2z"/></svg>
+      <span class="cta-num">(513) 795-4171</span>
+    </a>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="svgi" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
   </div>
 </header>
 
 <main>
-  <section class="page-header">
+  <section class="page-header" style="--bg-photo: url('/assets/work/1970s-ford-f250.jpg');">
     <div class="container">
-      <div class="eyebrow" style="color: var(--green-300);">What we fix</div>
-      <h1>Full-service automotive repair</h1>
+      <div class="eyebrow on-dark">What we fix</div>
+      <h1>Full-service repair, <span class="script">honestly done.</span></h1>
       <p>From a check-engine light to a transmission rebuild, we take it on. All makes, all models — and most of the things with motors that aren't cars, too.</p>
     </div>
   </section>
 
+  <div class="hazard" aria-hidden="true"></div>
+
   <section>
     <div class="container">
-      <div class="services-grid">
-        <div class="service">
-          <div class="icon">&#128295;</div>
-          <h3>Diagnostics &amp; Check Engine</h3>
-          <p>OBD-II scans, drivability complaints, intermittent issues. We tell you what's actually wrong before we recommend a fix.</p>
+      <div class="shop-head">
+        <div class="stencil">01 · The full menu</div>
+        <h2>Twelve things we do every week.</h2>
+        <span class="scrawl">no bait-and-switch &mdash; ask if you don't see it</span>
+      </div>
+
+      <div class="shoplist">
+        <div class="heading">— shop services —</div>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Diagnostics &amp; Check Engine</h3>
+            <p>OBD-II scans, drivability complaints, intermittent issues. We tell you what's actually wrong before we recommend a fix.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#128683;</div>
-          <h3>Brake Service</h3>
-          <p>Pad &amp; rotor replacement, calipers, lines, master cylinders, ABS diagnosis, fluid flush. Quiet stops, firm pedal.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Brake Service</h3>
+            <p>Pad &amp; rotor replacement, calipers, lines, master cylinders, ABS diagnosis, fluid flush. Quiet stops, firm pedal.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#128738;</div>
-          <h3>Engine Repair</h3>
-          <p>Tune-ups, timing belts/chains, head gaskets, valve work, oil leaks, water pumps, full rebuilds when it makes sense.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Engine Repair</h3>
+            <p>Tune-ups, timing belts/chains, head gaskets, valve work, oil leaks, water pumps. Full rebuilds when it makes sense.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#9881;</div>
-          <h3>Transmission &amp; Drivetrain</h3>
-          <p>Fluid services, clutch replacement, axle &amp; CV joint repair, differentials, transfer cases.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Transmission &amp; Drivetrain</h3>
+            <p>Fluid services, clutch replacement, axle &amp; CV joint repair, differentials, transfer cases.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#10052;</div>
-          <h3>Heating &amp; A/C</h3>
-          <p>A/C recharges, leak detection, compressor &amp; condenser replacement, heater cores, blower motors.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Heating &amp; A/C</h3>
+            <p>A/C recharges, leak detection, compressor &amp; condenser replacement, heater cores, blower motors.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#9889;</div>
-          <h3>Electrical Systems</h3>
-          <p>Batteries, alternators, starters, charging system diagnosis, wiring repair, parasitic draws, sensor replacement.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Electrical Systems</h3>
+            <p>Batteries, alternators, starters, charging system diagnosis, wiring repair, parasitic draws, sensor replacement.</p>
+            <span class="note">— wiring gremlins our specialty</span>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#128737;</div>
-          <h3>Suspension &amp; Steering</h3>
-          <p>Struts, shocks, control arms, tie rods, ball joints, wheel bearings, alignments, power steering.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Suspension &amp; Steering</h3>
+            <p>Struts, shocks, control arms, tie rods, ball joints, wheel bearings, alignments, power steering.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#128738;&#65039;</div>
-          <h3>Oil Changes &amp; Routine Service</h3>
-          <p>Conventional &amp; synthetic oil, filters, fluid flushes, belts, hoses, scheduled maintenance for any mileage.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Oil Changes &amp; Routine</h3>
+            <p>Conventional &amp; synthetic oil, filters, fluid flushes, belts, hoses, scheduled maintenance for any mileage.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#128064;</div>
-          <h3>Pre-Purchase Inspections</h3>
-          <p>Buying used? Bring it by first. We'll inspect top to bottom and tell you what you're really getting.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Pre-Purchase Inspections</h3>
+            <p>Buying used? Bring it by first. We'll inspect top to bottom and tell you what you're really getting.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#128666;</div>
-          <h3>Truck &amp; Fleet</h3>
-          <p>Work trucks and small fleets — keep them running, keep them earning. We can schedule around your routes.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Truck &amp; Fleet</h3>
+            <p>Work trucks and small fleets — keep them running, keep them earning. We can schedule around your routes.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#128293;</div>
-          <h3>Exhaust Systems</h3>
-          <p>Mufflers, catalytic converters, pipes, flex joints, weld repairs. Get it quiet and get it legal.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Exhaust Systems</h3>
+            <p>Mufflers, catalytic converters, pipes, flex joints, weld repairs. Get it quiet and get it legal.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon">&#128295;</div>
-          <h3>Anything with a motor</h3>
-          <p>The "and&hellip;" in our name is real. Got an engine in something that isn't a car? Ask. The answer is usually yes.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Anything with a motor</h3>
+            <p>The "and&hellip;" in our name is real. Got an engine in something that isn't a car? Ask. The answer is usually yes.</p>
+            <span class="note">— bring it. we'll take a look.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pullquote" aria-label="Customer review">
+    <div class="container">
+      <div class="note">
+        <blockquote>Honest pricing. They told me a repair I thought I needed actually didn't — saved me $400.</blockquote>
+        <div class="sig">
+          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+          <span><strong>— Sarah K.</strong>, Montgomery</span>
+          <span class="source">/ via Facebook</span>
         </div>
       </div>
     </div>
@@ -112,11 +165,12 @@
 
   <section class="cta-strip">
     <div class="container">
-      <h2>Not sure what's wrong?</h2>
-      <p>Most jobs start with a phone call. Tell us what you're hearing, seeing, or smelling — we'll tell you whether it can wait, and what it'll take to look at.</p>
+      <span class="script">not sure what's wrong?</span>
+      <h2>Most jobs start with a phone call.</h2>
+      <p>Tell us what you're hearing, seeing, or smelling — we'll tell you whether it can wait, and what it'll take to look at.</p>
       <div class="hero-actions" style="justify-content: center;">
-        <a class="btn btn-primary" style="background: var(--green-700); color: white;" href="tel:+15137954171">Call (513) 795-4171</a>
-        <a class="btn btn-ghost" style="color: var(--green-800); border-color: var(--green-800);" href="/contact">Send a message</a>
+        <a class="btn btn-primary" href="/contact">Book an appointment</a>
+        <a class="btn btn-ghost" href="tel:+15137954171">Call (513) 795-4171</a>
       </div>
     </div>
   </section>
@@ -127,13 +181,34 @@
     <div class="grid">
       <div class="footer-brand">
         <img src="/assets/hyams-logo.png" alt="Hyams Auto">
-        <p style="margin-top: 14px;">A full automotive service specialist garage in Blue Ash, OH.</p>
+        <p style="margin-top: 14px;">A full automotive service specialist garage in Blue Ash, OH. If it's broke, we can fix it.</p>
       </div>
-      <div><h4>Visit</h4><p>11318 Tamarco Dr<br>Blue Ash, OH 45242</p></div>
-      <div><h4>Contact</h4><ul><li><a href="tel:+15137954171">(513) 795-4171</a></li><li><a href="/contact">Send a message</a></li></ul></div>
-      <div><h4>Site</h4><ul><li><a href="/">Home</a></li><li><a href="/services">Services</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div>
+        <h4>Visit</h4>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Hyams+Auto+11318+Tamarco+Dr+Blue+Ash+OH+45242" target="_blank" rel="noopener">11318 Tamarco Dr<br>Blue Ash, OH 45242</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15137954171">(513) 795-4171</a></li>
+          <li><a href="mailto:hyamsauto@gmail.com">hyamsauto@gmail.com</a></li>
+          <li><a href="/contact">Send a message</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><div>&copy; <span id="year">2026</span> Hyams Auto.</div><div>Built for drivers in the Cincinnati area.</div></div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year">2026</span> Hyams Auto. All rights reserved.</div>
+      <div>Built for drivers in the Cincinnati area.</div>
+    </div>
   </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

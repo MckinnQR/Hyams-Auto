@@ -4,7 +4,12 @@
   "private": true,
   "scripts": {
     "process-logo": "python scripts/process-logo.py",
-    "serve": "firebase emulators:start --only hosting",
-    "deploy": "firebase deploy --only hosting"
+    "dev": "firebase emulators:start --only hosting",
+    "serve": "firebase emulators:start --only hosting,functions",
+    "serve:hosting": "firebase emulators:start --only hosting",
+    "deploy": "firebase deploy --only hosting,functions",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:functions": "firebase deploy --only functions",
+    "functions:install": "cd functions && npm install"
   }
 }

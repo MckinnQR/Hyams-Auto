@@ -5,6 +5,9 @@
     "cleanUrls": true,
     "trailingSlash": false,
     "404": "404.html",
+    "rewrites": [
+      { "source": "/api/lead", "function": { "functionId": "lead", "region": "us-central1" } }
+    ],
     "headers": [
       {
         "source": "**",
@@ -34,8 +37,17 @@
       }
     ]
   },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "runtime": "nodejs20",
+      "ignore": ["node_modules", ".git", "firebase-debug.log", "firebase-debug.*.log"]
+    }
+  ],
   "emulators": {
     "hosting": {"port": 5002},
+    "functions": {"port": 5001},
     "ui": {"enabled": true, "port": 4000},
     "singleProjectMode": true
   }

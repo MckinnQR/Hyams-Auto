@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Big+Shoulders+Display:wght@700;800&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Caveat:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Special+Elite&amp;display=swap">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
@@ -22,26 +22,33 @@
 
 <header class="site-header">
   <div class="container bar">
-    <a href="/" class="brand"><img src="/assets/hyams-logo.png" alt="Hyams Auto" width="200" height="104"></a>
+    <a href="/" class="brand" aria-label="Hyams Auto home"><img src="/assets/hyams-logo.png" alt="Hyams Auto" width="200" height="104"></a>
     <nav class="nav" aria-label="Primary">
       <a href="/">Home</a>
       <a href="/services">Services</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
     </nav>
-    <a href="tel:+15137954171" class="header-cta"><span aria-hidden="true">&#128222;</span> (513) 795-4171</a>
-    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <a href="tel:+15137954171" class="header-cta" aria-label="Call (513) 795-4171">
+      <svg class="svgi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72a2 2 0 0 1 1.72 2z"/></svg>
+      <span class="cta-num">(513) 795-4171</span>
+    </a>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="svgi" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
   </div>
 </header>
 
 <main>
-  <section class="page-header">
+  <section class="page-header" style="--bg-photo: url('/assets/work/1957-chevy-bel-air.jpg');">
     <div class="container">
-      <div class="eyebrow" style="color: var(--green-300);">About Hyams Auto</div>
-      <h1>The "and&hellip;" matters.</h1>
+      <div class="eyebrow on-dark">About Hyams Auto</div>
+      <h1>The <span class="script">"and&hellip;"</span><br>matters.</h1>
       <p>We are a full automotive service specialist garage in Blue Ash, Ohio. The "and&hellip;" in our name is for our love of anything with a motor.</p>
     </div>
   </section>
+
+  <div class="hazard" aria-hidden="true"></div>
 
   <section>
     <div class="container">
@@ -49,11 +56,28 @@
         <h2>What we do here</h2>
         <p>Hyams Auto is a full automotive service specialist garage. We work on cars and trucks of every make and model — daily drivers, family vehicles, work trucks, and the project car gathering dust in your garage. If it's broke, we can fix it.</p>
 
-        <blockquote>"If it's broke, we can fix it." — That's not a slogan we put on a wall. It's how we decide whether to take a job.</blockquote>
+        <blockquote>"If it's broke, we can fix it." — that's not a slogan we put on a wall. It's how we decide whether to take a job.</blockquote>
 
         <h2>Why the "and&hellip;"</h2>
         <p>The dots after our name aren't a typo. They're there because we don't only do cars. The "and&hellip;" is for our love of anything with a motor — bikes, small engines, fleet equipment, the odd machine you can't find anyone else willing to look at.</p>
         <p>Bring it in. We'll take a look and tell you straight what it needs and what it'll cost.</p>
+
+        <figure class="work-card" style="max-width: 320px; margin: 2em auto;">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="/assets/howard.jpg" alt="Howard, the shop mascot" loading="lazy">
+          <figcaption>
+            <h3>Howard</h3>
+            <span class="tag">Shop mascot</span>
+          </figcaption>
+        </figure>
+
+        <div class="lift-callout">
+          <div class="label">On the lift</div>
+          <div class="body">
+            <p class="what">a '37 Cord, a Bel Air, &amp; a tired F-250</p>
+            <p>That's a normal week. Daily drivers in one bay, pre-war American iron in another, a work truck on the rack out back. The variety is the point.</p>
+          </div>
+        </div>
 
         <h2>How we work</h2>
         <p>We diagnose before we quote, we tell you what we find, and we don't add work that doesn't need doing. If it's not worth fixing, we'll tell you that too. That's how a shop earns repeat customers — and it's how we've built a 100% recommendation rate from the people who've walked through our door.</p>
@@ -61,30 +85,71 @@
         <h2>Who we serve</h2>
         <p>We're based in Blue Ash and serve drivers across the greater Cincinnati area — Montgomery, Sycamore, Mason, Sharonville, Kenwood, and the surrounding communities. Walk-ins welcome; calls preferred so we can save you a slot.</p>
 
-        <p style="margin-top: 2em;">
-          <a class="btn btn-primary" style="background: var(--green-700); color: white;" href="tel:+15137954171">Call (513) 795-4171</a>
-          &nbsp;
-          <a class="btn btn-ghost" style="color: var(--green-800); border-color: var(--green-800);" href="/contact">Get in touch</a>
-        </p>
+        <div class="hero-actions" style="margin-top: 2.4em;">
+          <a class="btn btn-primary" href="tel:+15137954171">Call (513) 795-4171</a>
+          <a class="btn btn-dark" href="/contact">Get in touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <div class="shop-head on-dark">
+        <div class="stencil">02 · Recent work</div>
+        <h2>A few from the bays.</h2>
+        <span class="scrawl">daily drivers, classics &amp; weird stuff</span>
+      </div>
+      <div class="work-grid">
+        <figure class="work-card">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="/assets/work/1937-cord.jpg" alt="1937 Cord 812" loading="lazy">
+          <figcaption>
+            <h3>1937 Cord 812</h3>
+            <span class="tag">Pre-war / 8 cyl</span>
+          </figcaption>
+        </figure>
+        <figure class="work-card">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="/assets/work/1970s-ford-f250.jpg" alt="1970s Ford F-250" loading="lazy">
+          <figcaption>
+            <h3>'70s F-250</h3>
+            <span class="tag">Work truck</span>
+          </figcaption>
+        </figure>
+        <figure class="work-card">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="/assets/work/1957-chevy-bel-air.jpg" alt="1957 Chevrolet Bel Air" loading="lazy">
+          <figcaption>
+            <h3>'57 Bel Air</h3>
+            <span class="tag">Tri-Five Chevy</span>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
   <section class="info-band">
     <div class="container">
-      <div class="info-cards">
-        <div class="info-card">
-          <h3>Call</h3>
-          <p class="big"><a href="tel:+15137954171">(513) 795-4171</a></p>
+      <div class="shop-head on-dark">
+        <div class="stencil">03 · Find us</div>
+        <h2>Blue Ash, Ohio.</h2>
+        <span class="scrawl">11318 Tamarco Dr &mdash; 45242</span>
+      </div>
+      <div class="info-grid">
+        <div class="item">
+          <div class="lbl">Call</div>
+          <div class="big"><a href="tel:+15137954171">(513) 795-4171</a></div>
         </div>
-        <div class="info-card">
-          <h3>Visit</h3>
-          <p class="big">11318 Tamarco Dr</p>
+        <div class="item">
+          <div class="lbl">Visit</div>
+          <div class="big">11318 Tamarco Dr</div>
           <p>Blue Ash, OH 45242</p>
         </div>
-        <div class="info-card">
-          <h3>Hours</h3>
-          <p>Mon–Fri &nbsp; 8:00 AM – 5:00 PM<br>Sat &nbsp; By appointment<br>Sun &nbsp; Closed</p>
+        <div class="item">
+          <div class="lbl">Hours</div>
+          <div class="big" style="font-size: 1.4rem;">Mon–Fri · 8a–5p</div>
+          <p>Sat by appointment · Sun closed</p>
         </div>
       </div>
     </div>
@@ -96,13 +161,34 @@
     <div class="grid">
       <div class="footer-brand">
         <img src="/assets/hyams-logo.png" alt="Hyams Auto">
-        <p style="margin-top: 14px;">A full automotive service specialist garage in Blue Ash, OH.</p>
+        <p style="margin-top: 14px;">A full automotive service specialist garage in Blue Ash, OH. If it's broke, we can fix it.</p>
       </div>
-      <div><h4>Visit</h4><p>11318 Tamarco Dr<br>Blue Ash, OH 45242</p></div>
-      <div><h4>Contact</h4><ul><li><a href="tel:+15137954171">(513) 795-4171</a></li><li><a href="/contact">Send a message</a></li></ul></div>
-      <div><h4>Site</h4><ul><li><a href="/">Home</a></li><li><a href="/services">Services</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div>
+        <h4>Visit</h4>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Hyams+Auto+11318+Tamarco+Dr+Blue+Ash+OH+45242" target="_blank" rel="noopener">11318 Tamarco Dr<br>Blue Ash, OH 45242</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15137954171">(513) 795-4171</a></li>
+          <li><a href="mailto:hyamsauto@gmail.com">hyamsauto@gmail.com</a></li>
+          <li><a href="/contact">Send a message</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><div>&copy; <span id="year">2026</span> Hyams Auto.</div><div>Built for drivers in the Cincinnati area.</div></div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year">2026</span> Hyams Auto. All rights reserved.</div>
+      <div>Built for drivers in the Cincinnati area.</div>
+    </div>
   </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

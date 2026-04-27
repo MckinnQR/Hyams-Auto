@@ -9,7 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Big+Shoulders+Display:wght@700;800&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Caveat:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Special+Elite&amp;display=swap">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
@@ -21,15 +21,20 @@
 
 <header class="site-header">
   <div class="container bar">
-    <a href="/" class="brand"><img src="/assets/hyams-logo.png" alt="Hyams Auto" width="200" height="104"></a>
+    <a href="/" class="brand" aria-label="Hyams Auto home"><img src="/assets/hyams-logo.png" alt="Hyams Auto" width="200" height="104"></a>
     <nav class="nav" aria-label="Primary">
       <a href="/">Home</a>
       <a href="/services">Services</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
     </nav>
-    <a href="tel:+15137954171" class="header-cta"><span aria-hidden="true">&#128222;</span> (513) 795-4171</a>
-    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <a href="tel:+15137954171" class="header-cta" aria-label="Call (513) 795-4171">
+      <svg class="svgi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72a2 2 0 0 1 1.72 2z"/></svg>
+      <span class="cta-num">(513) 795-4171</span>
+    </a>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="svgi" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
   </div>
 </header>
 
@@ -37,20 +42,49 @@
   <div class="container">
     <div class="fourohfour">
       <div class="big">404</div>
-      <h2>That page took a wrong turn.</h2>
-      <p class="muted">It either moved or never existed. No big deal — head back to the home page or give us a call.</p>
-      <p style="margin-top: 16px;">
-        <a class="btn btn-primary" style="background: var(--green-700); color: white;" href="/">Back to home</a>
-        &nbsp;
-        <a class="btn btn-ghost" style="color: var(--green-800); border-color: var(--green-800);" href="tel:+15137954171">Call (513) 795-4171</a>
-      </p>
+      <h2>Took a wrong turn.</h2>
+      <p class="muted" style="font-family: 'Special Elite', monospace;">That page moved or never existed. No big deal — head back home or give us a call.</p>
+      <div class="hero-actions" style="margin-top: 24px; justify-content: center;">
+        <a class="btn btn-primary" href="/">Back to home</a>
+        <a class="btn btn-ghost" style="color: var(--ink); border-color: var(--ink); box-shadow: 2px 2px 0 var(--ink);" href="tel:+15137954171">Call (513) 795-4171</a>
+      </div>
     </div>
   </div>
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-bottom"><div>&copy; <span id="year">2026</span> Hyams Auto.</div></div>
+    <div class="grid">
+      <div class="footer-brand">
+        <img src="/assets/hyams-logo.png" alt="Hyams Auto">
+        <p style="margin-top: 14px;">A full automotive service specialist garage in Blue Ash, OH. If it's broke, we can fix it.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Hyams+Auto+11318+Tamarco+Dr+Blue+Ash+OH+45242" target="_blank" rel="noopener">11318 Tamarco Dr<br>Blue Ash, OH 45242</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15137954171">(513) 795-4171</a></li>
+          <li><a href="mailto:hyamsauto@gmail.com">hyamsauto@gmail.com</a></li>
+          <li><a href="/contact">Send a message</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year">2026</span> Hyams Auto. All rights reserved.</div>
+      <div>Built for drivers in the Cincinnati area.</div>
+    </div>
   </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

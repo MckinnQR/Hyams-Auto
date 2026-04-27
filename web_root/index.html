@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Big+Shoulders+Display:wght@700;800&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Caveat:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Special+Elite&amp;display=swap">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
@@ -36,6 +36,7 @@
     "name": "Hyams Auto & ...",
     "image": "https://hyamsauto.com/assets/og-image.png",
     "telephone": "+1-513-795-4171",
+    "email": "hyamsauto@gmail.com",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -49,7 +50,7 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5.0",
-      "reviewCount": "10"
+      "reviewCount": "71"
     },
     "openingHoursSpecification": [
       {"@type": "OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}
@@ -70,134 +71,424 @@
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
     </nav>
-    <a href="tel:+15137954171" class="header-cta">
-      <span aria-hidden="true">&#128222;</span> (513) 795-4171
+    <a href="tel:+15137954171" class="header-cta" aria-label="Call (513) 795-4171">
+      <svg class="svgi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72a2 2 0 0 1 1.72 2z"/></svg>
+      <span class="cta-num">(513) 795-4171</span>
     </a>
-    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="svgi" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
   </div>
 </header>
 
 <main>
 
-  <section class="hero">
+  <section class="hero" style="--hero-photo: url('/assets/work/1957-chevy-bel-air.jpg');">
     <div class="container">
-      <div class="eyebrow" style="color: var(--green-300);">Blue Ash, OH &middot; Family-owned garage</div>
-      <h1>If it's broke,<br><span class="accent">we can fix it.</span></h1>
+      <div class="eyebrow on-dark">Blue Ash · Ohio · Family-run</div>
+      <h1>If it's broke,<span class="script">we can fix it.</span></h1>
       <p class="lede">
         Hyams Auto is a full automotive service specialist garage. The <em>"and&hellip;"</em> in our name
-        is for our love of anything with a motor. Cars, trucks, fleet, and the odd thing nobody else will touch.
+        is for our love of anything with a motor — cars, trucks, fleet, and the odd thing nobody else will touch.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="tel:+15137954171">Call (513) 795-4171</a>
-        <a class="btn btn-ghost" href="/services">See our services</a>
+        <a class="btn btn-ghost" href="/services">See what we fix</a>
       </div>
-      <div class="hero-meta">
-        <div class="item"><span class="dot"></span> Open today &middot; Mon–Fri 8a–5p</div>
-        <div class="item">100% recommended &middot; 10 reviews</div>
-        <div class="item">11318 Tamarco Dr, Blue Ash</div>
+
+      <div class="hero-ticket" aria-label="Shop status">
+        <div class="item">
+          <span class="lbl">Open Today</span>
+          <span class="val"><span class="dot"></span>Mon–Fri · 8a–5p</span>
+        </div>
+        <div class="item">
+          <span class="lbl">Recommended</span>
+          <span class="val">5.0 ★ · 70+ reviews</span>
+        </div>
+        <div class="item">
+          <span class="lbl">Find Us</span>
+          <span class="val"><a href="https://www.google.com/maps/search/?api=1&amp;query=Hyams+Auto+11318+Tamarco+Dr+Blue+Ash+OH+45242" target="_blank" rel="noopener">11318 Tamarco Dr</a></span>
+        </div>
       </div>
     </div>
   </section>
+
+  <div class="hazard" aria-hidden="true"></div>
 
   <section>
     <div class="container">
-      <div class="section-head">
-        <div class="eyebrow">What we do</div>
-        <h2>Full-service automotive repair</h2>
-        <p>Diagnosis to delivery — engines, brakes, electrical, A/C, drivetrain, the works. If you'd rather not guess what's wrong, bring it to someone who's seen it before.</p>
+      <div class="shop-head">
+        <div class="stencil">01 · What we fix</div>
+        <h2>If it's broke, it's on the list.</h2>
+        <span class="scrawl">all makes &mdash; all models &mdash; from a check-engine light to a full rebuild</span>
       </div>
-      <div class="services-grid">
-        <div class="service">
-          <div class="icon" aria-hidden="true">&#128295;</div>
-          <h3>Diagnostics &amp; Check Engine</h3>
-          <p>Codes pulled, root cause found. We tell you what it is, what it'll cost, and what can wait.</p>
+
+      <div class="shoplist">
+        <div class="heading">— the job board —</div>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Diagnostics &amp; Check Engine</h3>
+            <p>Codes pulled, root cause found. We tell you what it is, what it'll cost, and what can wait.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon" aria-hidden="true">&#128683;</div>
-          <h3>Brakes</h3>
-          <p>Pads, rotors, calipers, lines, fluid. Quiet stops, predictable pedal.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Brakes</h3>
+            <p>Pads, rotors, calipers, lines, fluid. Quiet stops, predictable pedal.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon" aria-hidden="true">&#128738;</div>
-          <h3>Engine &amp; Drivetrain</h3>
-          <p>Timing, head gaskets, transmissions, clutches, axles. Big jobs we do right the first time.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Engine &amp; Drivetrain</h3>
+            <p>Timing, head gaskets, transmissions, clutches, axles. Big jobs done right the first time.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon" aria-hidden="true">&#10052;</div>
-          <h3>Heating &amp; A/C</h3>
-          <p>Recharge, leak detection, compressors, blower motors. Comfortable in any season.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Heating &amp; A/C</h3>
+            <p>Recharge, leak detection, compressors, blower motors. Comfortable in any season.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon" aria-hidden="true">&#9889;</div>
-          <h3>Electrical</h3>
-          <p>Batteries, alternators, starters, wiring gremlins. The stuff other shops shrug at.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Electrical</h3>
+            <p>Batteries, alternators, starters, wiring gremlins. The stuff other shops shrug at.</p>
+            <span class="note">— yeah, including that thing nobody else can find</span>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon" aria-hidden="true">&#128737;</div>
-          <h3>Suspension &amp; Steering</h3>
-          <p>Struts, shocks, control arms, ball joints, alignments. Smoother ride, straighter tracking.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Suspension &amp; Steering</h3>
+            <p>Struts, shocks, control arms, ball joints, alignments. Smoother ride, straighter tracking.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon" aria-hidden="true">&#128738;&#65039;</div>
-          <h3>Oil &amp; Routine Service</h3>
-          <p>Oil, filters, fluids, belts, hoses. The boring stuff that keeps everything else from breaking.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Oil &amp; Routine Service</h3>
+            <p>Oil, filters, fluids, belts, hoses. The boring stuff that keeps everything else from breaking.</p>
+          </div>
         </div>
-        <div class="service">
-          <div class="icon" aria-hidden="true">&#128064;</div>
-          <h3>Pre-Purchase Inspection</h3>
-          <p>Thinking of buying it? Bring it by first. We'll tell you what you're really looking at.</p>
+        <div class="row">
+          <span class="check" aria-hidden="true">✓</span>
+          <div>
+            <h3>Anything with a motor</h3>
+            <p>Pre-purchase inspections, fleet, work trucks, the project car in your garage. Bring it. Ask.</p>
+            <span class="note">— if it's got pistons or wires, we want to look at it</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="promise tight">
+  <section class="pullquote" aria-label="Customer reviews">
     <div class="container">
-      <div class="row">
-        <div><div class="pill">100%</div><div class="lbl">Recommended on Facebook</div></div>
-        <div><div class="pill">$$</div><div class="lbl">Honest pricing, no surprises</div></div>
-        <div><div class="pill">All</div><div class="lbl">Makes &amp; models</div></div>
-        <div><div class="pill">1</div><div class="lbl">Family-run shop</div></div>
+      <div class="shop-head on-dark" style="margin-bottom: 40px;">
+        <div class="stencil">— from the wall —</div>
+        <h2>What folks are saying.</h2>
+      </div>
+      <div class="reviews-carousel" data-reviews>
+
+        <div class="rc-toolbar">
+          <div class="rc-toolbar-row rc-toolbar-row--top">
+            <div class="rc-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="rc-search-icon">
+                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 20l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <input type="search" placeholder="Search reviews…" data-rc-search aria-label="Search reviews">
+            </div>
+            <div class="rc-sort" data-rc-sort-root>
+              <button class="rc-sort-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Sort reviews" data-rc-sort-btn>
+                <svg class="rc-sort-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 4v16M7 20l-3-3M7 20l3-3M17 20V4M17 4l-3 3M17 4l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="rc-sort-label" data-rc-sort-label>Featured</span>
+                <svg class="rc-sort-caret" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <ul class="rc-sort-menu" role="listbox" aria-label="Sort by" data-rc-sort-menu hidden>
+                <li role="option" data-rc-sort-opt="featured" aria-selected="true">
+                  <span class="rc-opt-icon">
+                    <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 1.5l1.94 4.6 4.96.42-3.77 3.27 1.13 4.86L9 12.13 4.74 14.65l1.13-4.86L2.1 6.52l4.96-.42L9 1.5z" fill="currentColor"/></svg>
+                  </span>
+                  Featured
+                </li>
+                <li role="option" data-rc-sort-opt="newest" aria-selected="false">
+                  <span class="rc-opt-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                  </span>
+                  Newest first
+                </li>
+                <li role="option" data-rc-sort-opt="oldest" aria-selected="false">
+                  <span class="rc-opt-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l-4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                  </span>
+                  Oldest first
+                </li>
+                <li role="option" data-rc-sort-opt="name" aria-selected="false">
+                  <span class="rc-opt-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h11M5 12h11M5 18h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 8V20M19 20l-2-2M19 20l2-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  By name (A–Z)
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="rc-chips" role="tablist" aria-label="Filter by source">
+            <button type="button" class="rc-chip is-active" data-rc-filter="all" role="tab" aria-selected="true" aria-label="All reviews">
+              <svg class="rc-brand rc-brand-all" viewBox="0 0 18 18" aria-hidden="true">
+                <path d="M9 1.5l1.94 4.6 4.96.42-3.77 3.27 1.13 4.86L9 12.13 4.74 14.65l1.13-4.86L2.1 6.52l4.96-.42L9 1.5z" fill="currentColor"/>
+              </svg>
+              <span>All</span><em data-rc-count="all"></em>
+            </button>
+            <button type="button" class="rc-chip" data-rc-filter="google" role="tab" aria-selected="false">
+              <svg class="rc-brand" viewBox="0 0 18 18" aria-hidden="true">
+                <path d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.71v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.61z" fill="#4285f4"/>
+                <path d="M9 18c2.43 0 4.47-.81 5.96-2.18l-2.92-2.26c-.8.54-1.83.86-3.04.86-2.34 0-4.32-1.58-5.03-3.71H.96v2.33A9 9 0 0 0 9 18z" fill="#34a853"/>
+                <path d="M3.97 10.71A5.41 5.41 0 0 1 3.68 9c0-.59.1-1.17.29-1.71V4.96H.96A9 9 0 0 0 0 9c0 1.45.35 2.82.96 4.04l3.01-2.33z" fill="#fbbc05"/>
+                <path d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58A9 9 0 0 0 9 0 9 9 0 0 0 .96 4.96l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z" fill="#ea4335"/>
+              </svg>
+              <span>Google</span><em data-rc-count="google"></em>
+            </button>
+            <button type="button" class="rc-chip" data-rc-filter="facebook" role="tab" aria-selected="false">
+              <svg class="rc-brand" viewBox="0 0 18 18" aria-hidden="true">
+                <path d="M18 9a9 9 0 1 0-10.4 8.89v-6.29H5.31V9h2.29V7.01c0-2.27 1.35-3.52 3.41-3.52.99 0 2.02.18 2.02.18v2.22h-1.14c-1.12 0-1.47.7-1.47 1.41V9h2.5l-.4 2.6h-2.1v6.29A9 9 0 0 0 18 9z" fill="#1877f2"/>
+              </svg>
+              <span>Facebook</span><em data-rc-count="facebook"></em>
+            </button>
+          </div>
+        </div>
+
+        <button class="rc-btn rc-prev" type="button" aria-label="Previous reviews">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <script type="application/json" data-rc-data>
+[
+  {"source":"google","name":"Valerie Butler","date":"2025-12-27","text":"Charlie and crew do outstanding work. I have a 2011 Santa Fe SUV and they did a great job doing maintenance on the ole girl. She runs great. He put in a new alternator, did an oil change, checked my brakes, and swapped out some worn out parts. Reasonable price."},
+  {"source":"google","name":"Steve Jones","date":"2025-08-27","text":"I have been using Charlie's services since he started his business — for my fleet of company vehicles and my personal vehicles too. He has always exceeded my every expectation and saved me so much money over his competitors. His integrity is beyond question. I like doing business with people like that!"},
+  {"source":"google","name":"E DU","date":"2025-11-27","text":"We've had our cars serviced here since it opened. They provide good work at honest costs. Reasonable price."},
+  {"source":"google","name":"Ryan Hess","date":"2025-08-27","text":"Great service and very friendly! We were in Cincinnati from out of town and needed a new caliper — they were able to fix it that afternoon, which made our trip so much better. I would highly recommend them!"},
+  {"source":"google","name":"Douglas Meyer","date":"2025-04-27","text":"The best in the business. Charlie is smart, honest, and dependable. I have taken many cars to him and always the same great service — over a 15 year time period! Thanks Charlie for saving me thousands of dollars."},
+  {"source":"google","name":"Jason Abbott","date":"2025-04-27","text":"Highly recommend Hyams Automotive. Charlie and his team are honest and do great work. I've been using them since 2016. You won't be disappointed!"},
+  {"source":"google","name":"Joseph Tomasulo","date":"2024-04-27","text":"Charlie has been my personal mechanic since 2013 when I first met him. He did something that demonstrated honesty and integrity when he could've easily done otherwise."},
+  {"source":"google","name":"Jasmin Cooper","date":"2023-04-27","text":"I've known Charlie for more than 20 years, and thankfully nothing has changed other than possibly our amount of grey hairs! Charlie is still incredibly knowledgeable, honest, fair, and communicates everything up front so you have zero surprises."},
+  {"source":"google","name":"Matthew Gunter","date":"2025-04-27","text":"I don't really give good reviews because I usually want to keep the good ones to myself. But we've been doing business with Charlie for 15 years. We love him and we consider him a friend. Nothing like having good trustworthy people in your life."},
+  {"source":"google","name":"Steve Mann","date":"2026-02-27","text":"Honest, reliable service at a fair price."},
+  {"source":"google","name":"Rebekah Root","date":"2023-04-27","text":"Amazing experience!! Took my car in with multiple issues. The problem was a little bigger than we initially suspected and even though he couldn't fix it, he referred me to several people who he knew could — and didn't even charge me."},
+  {"source":"google","name":"Adam Webb","date":"2024-04-27","text":"Excellent and friendly service. This was the first time I've been to a mechanic and I've not felt like I was getting scammed. Truly an honest owner, great business, and they fixed all the issues I had with my vehicle. Will be returning here for all my future car-related problems."},
+  {"source":"google","name":"Matthew Reinhold","date":"2024-04-27","text":"I had a potentially big issue with my car, so I dropped it off at Hyams Auto. I also had the team take a look at a few other issues. The next morning, I received a call and we walked through each potential issue."},
+  {"source":"google","name":"Michael B","date":"2021-04-27","text":"I've been taking my SUV to Hyams for almost 2 years. I live in Indianapolis now, but I still wait until I'm back in Blue Ash to get work done. He's that good. Charlie is honest and incredibly knowledgeable, and that's all you'll ever need in a great mechanic."},
+  {"source":"google","name":"Kaycee Roberts","date":"2022-04-27","text":"I found myself 6 hours from home on a road trip with an SUV trunk that would not close or latch. In a panic, I reached out to Hyams. Despite their busy schedule, they fit me in immediately, solved the problem, and had me back on the road."},
+  {"source":"google","name":"Charles Boegli","date":"2018-04-27","text":"Charlie Hyams is an honest and knowledgeable mechanic. His shop is not fancy, but they do good work at good prices."},
+  {"source":"google","name":"Dimitry Lebedev","date":"2019-04-27","text":"First time at this shop and had a great experience. Very personable service. Charlie knows what he is doing and is not trying to scam you on the parts, like most current shops are."},
+  {"source":"google","name":"C.K. Austin","date":"2023-04-27","text":"Charlie is awesome! He replaced my engine and worked with my insurance company to get it done! My car runs again and I'm excited!"},
+  {"source":"google","name":"Shah Nawaz","date":"2022-04-27","text":"I have a Mercedes with a check-engine light, and sometimes the airflow was not good. Got the check-engine light fixed with a reasonable charge. Strongly recommend Hyams Auto repairs."},
+  {"source":"google","name":"Ed Smithson","date":"2024-04-27","text":"Charlie and his staff were top notch. They were very knowledgeable and spent time explaining things. Highly recommended."},
+  {"source":"google","name":"Jack Brendamour","date":"2017-04-27","text":"Charlie is extremely creative when it comes to almost any situation. If he can't handle a certain task, he will point you in the right direction. A+ all around. Solid guy and solid company."},
+  {"source":"google","name":"Carl Zimpelman","date":"2024-04-27","text":"Worked with Charlie. Great guy to work with and work for. Very fair and honest — he won't tell you something you don't need. Five stars!!!"},
+  {"source":"google","name":"Berry Gilmore","date":"2022-04-27","text":"Always excellent service at reasonable prices. Hyams works on every car we own. Highly recommend this repair shop."},
+  {"source":"google","name":"Gyanmarco Flores","date":"2023-04-27","text":"Have been going there for many years and cannot compare with the service and honesty they provide, where others have scammed me out of thousands. They were really honest and gave me a lot of tips. Really trust them with my vehicles."},
+  {"source":"google","name":"David Morrical","date":"2021-04-27","text":"Charlie is a good guy — known him for some time when he managed another shop. Does good work at reasonable prices."},
+  {"source":"google","name":"Shaun Pitzer","date":"2022-04-27","text":"Fantastic. Great work for a reasonable price. Confident the work was done right, works to minimize downtime, very personable. Extremely knowledgeable."},
+  {"source":"google","name":"Carvinski Garrett","date":"2021-04-27","text":"Got me in and out! Very cool, down to earth — him and his crew. I would highly recommend coming here with any car or truck troubles!"},
+  {"source":"google","name":"Carolyn Hensley","date":"2021-04-27","text":"Very nice and honest place to have car repairs done. Worked on my uncle's '65 Mustang and always did a great job!"},
+  {"source":"google","name":"Darrell Radin","date":"2024-04-27","text":"Best mechanic in town with incredible value and personal service beyond what anyone else offers."},
+  {"source":"google","name":"Troix Alan","date":"2021-04-27","text":"I've been dealing with Hyams for years and EVERYTHING about this organization is top notch. Once you experience this service operation, you won't go elsewhere."},
+  {"source":"google","name":"Faris Siddiqui","date":"2017-04-27","text":"Outstanding and quality service. Please be patient with Charlie — he will get it done the right way."},
+  {"source":"google","name":"Ollokot Xios","date":"2023-04-27","text":"Knowledgeable, respectful, fair prices. He will treat you and your car right."},
+  {"source":"google","name":"Kenton Waldroup","date":"2023-04-27","text":"Great communication! Didn't overcharge me and was very helpful and informative!"},
+  {"source":"google","name":"Ahmad Hamdan","date":"2024-04-27","text":"Great shop and Charles was extra helpful and kind."},
+  {"source":"google","name":"Michael Stewart","date":"2019-04-27","text":"Good shop. Took care of me on short notice at a reasonable price."},
+  {"source":"google","name":"Mitchell Ray","date":"2025-04-27","text":"Excellent service, very friendly and knowledgeable."},
+  {"source":"google","name":"John Rengers","date":"2018-04-27","text":"Great knowledgeable man owns the place. Great guy, honest and fair."},
+  {"source":"google","name":"moebnet","date":"2017-04-27","text":"Never had a mechanic work so hard to get it right — and even harder to keep the cost down."},
+  {"source":"google","name":"Bud Wendel","date":"2025-10-27","text":"Best mechanic that I have found in 34 years. Great price."},
+  {"source":"google","name":"Mo Jo","date":"2019-04-27","text":"Great guy. He knows how to fix automobiles."},
+  {"source":"google","name":"Craig Gerber","date":"2021-04-27","text":"Thanks for fixing our truck and waiting for us to come get it."},
+  {"source":"google","name":"Matt Williams","date":"2020-04-27","text":"Charlie is the best. Period."},
+  {"source":"google","name":"Thomas Eliopulos","date":"2021-04-27","text":"Absolutely the best! Charlie Hyams."},
+  {"source":"google","name":"Ivonne Morales","date":"2020-04-27","text":"The best service you can find!"},
+  {"source":"google","name":"Griffin Idk","date":"2023-04-27","text":"He gets it done fast."},
+  {"source":"google","name":"osamu mukuda","date":"2024-04-27","text":"Excellent job."},
+  {"source":"google","name":"Stephen Boykin","date":"2018-04-27","text":"Exceptional."},
+  {"source":"google","name":"Brittany Couch","date":"2026-03-27","text":"The only shop my family will take our vehicles to. Great price."},
+  {"source":"facebook","name":"Eron Walton","date":"2024-08-01","text":"Only place in Cincinnati I'd take my vehicles. The honesty that was given is what made my experience so much better than any of my previous experiences with other shops."},
+  {"source":"facebook","name":"Peter Lovaas","date":"2024-06-15","text":"Brilliant mechanic, honest pricing, and always works with my schedule to reduce the stress of being out a car. Having found these guys has given me some serious peace of mind anytime something comes up."},
+  {"source":"facebook","name":"Ami Couck","date":"2024-05-20","text":"The best auto repair in the city. Honest and knows everything about cars. I would not take my car anywhere else."},
+  {"source":"facebook","name":"Heather Tome","date":"2024-09-10","text":"Best mechanic around. Total lifesaver! Does awesome work, answers all questions and doesn't overcharge or try to sell you on work you don't need. Can't recommend Charlie and his shop enough."},
+  {"source":"facebook","name":"Ryan Motley","date":"2024-07-05","text":"Charlie is an awesome guy! Very intelligent, always honest and explains the situation clearly. I moved away and I still always make the drive to bring my car back to him to be repaired. Highly recommended!!"}
+]
+        </script>
+        <div class="rc-track" role="region" aria-label="Customer reviews" tabindex="0">
+          <p class="rc-empty" data-rc-empty hidden>No reviews match — try clearing the search.</p>
+        </div>
+        <button class="rc-btn rc-next" type="button" aria-label="Next reviews">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="rc-dots" data-rc-dots aria-hidden="true"></div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="gallery">
     <div class="container">
-      <div class="split reverse">
+      <div class="shop-head on-dark">
+        <div class="stencil">02 · In the bays</div>
+        <h2>Lately on the lifts.</h2>
+        <span class="scrawl">daily drivers, classics, &amp; the odd thing nobody else will touch</span>
+      </div>
+      <div class="work-grid">
+        <figure class="work-card">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="/assets/work/1937-cord.jpg" alt="1937 Cord 812" loading="lazy" width="1600" height="1200">
+          <figcaption>
+            <h3>1937 Cord 812</h3>
+            <span class="tag">Pre-war / 8 cyl</span>
+          </figcaption>
+        </figure>
+        <figure class="work-card">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="/assets/work/1970s-ford-f250.jpg" alt="1970s Ford F-250" loading="lazy" width="1600" height="1200">
+          <figcaption>
+            <h3>'70s F-250</h3>
+            <span class="tag">Work truck</span>
+          </figcaption>
+        </figure>
+        <figure class="work-card">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="/assets/work/1957-chevy-bel-air.jpg" alt="1957 Chevrolet Bel Air" loading="lazy" width="1600" height="1200">
+          <figcaption>
+            <h3>'57 Bel Air</h3>
+            <span class="tag">Tri-Five Chevy</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="meet">
+    <div class="container">
+      <div class="grid">
+        <div class="photo">
+          <span class="tape" aria-hidden="true"></span>
+          <img src="/assets/work/1970s-ford-f250.jpg" alt="Inside the Hyams Auto shop">
+          <span class="caption">— in the shop, last Tuesday</span>
+        </div>
         <div>
-          <div class="eyebrow">About Hyams Auto</div>
-          <h2>The shop where the "and&hellip;" matters.</h2>
-          <p>We are a full automotive service specialist garage. The <strong>"and&hellip;"</strong> in our name is for our love of anything with a motor — if it's got pistons, plugs, or wires, we want to look at it.</p>
-          <p>That means daily drivers and family SUVs, sure. It also means the project car in your garage, the work truck that has to be running tomorrow, and the old engine nobody else wanted to touch.</p>
-          <p><a href="/about" class="btn btn-primary" style="background: var(--green-700); color: white;">Read our story</a></p>
+          <div class="eyebrow">Who you'll meet</div>
+          <h2>The shop where the <span class="script">"and&hellip;"</span> matters.</h2>
+          <p>One family. One shop. No service writers, no upsell tricks. When you call, you talk to whoever's wearing the cleaner shirt that day. When you pick up, you talk to the same person.</p>
+          <p>We've been doing this long enough to know what's worth fixing and what isn't — and we'll tell you either way.</p>
+          <ul class="specs">
+            <li><b>Family-run</b><span>One shop, one set of standards. Same hands on every job.</span></li>
+            <li><b>All makes</b><span>Domestic, import, classic, fleet, project cars, and the occasional small engine.</span></li>
+            <li><b>Honest quotes</b><span>We diagnose first, quote second. Nothing added that doesn't need adding.</span></li>
+            <li><b>Plain English</b><span>You'll hear what's wrong in words you can repeat to your spouse.</span></li>
+          </ul>
+          <p style="margin-top: 26px;">
+            <a class="btn btn-dark" href="/about">Read our story</a>
+          </p>
         </div>
-        <div class="visual">
-          <img src="/assets/hyams-logo.png" alt="Hyams Auto logo" loading="lazy">
-        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hazard" aria-hidden="true"></div>
+
+  <section class="faq">
+    <div class="container">
+      <div class="shop-head">
+        <div class="stencil">03 · Ask before you tow it</div>
+        <h2>Honest answers, no fine print.</h2>
+        <span class="scrawl">stuff people actually call to ask</span>
+      </div>
+      <div class="qa">
+        <details>
+          <summary>Do I need an appointment?</summary>
+          <div class="answer">
+            <p>Calling first helps — we can usually save you a slot, and on busy weeks it's the difference between same-day and next-week. Walk-ins are welcome too. Worst case we'll tell you when to come back.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Will you give me a price before you start?</summary>
+          <div class="answer">
+            <p>Always. We diagnose first, then call you with what we found and what it'll cost. Nothing gets touched until you say go. If we find more once we're in there, we stop and call again.</p>
+          </div>
+        </details>
+        <details>
+          <summary>Do you work on classic cars and weird stuff?</summary>
+          <div class="answer">
+            <p>Yes. Pre-war American iron, Tri-Five Chevys, vintage trucks, project cars, small engines, fleet — if it's got pistons or wires, we want to look at it. That's what the "and&hellip;" is for.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What if it's not worth fixing?</summary>
+          <div class="answer">
+            <p>We'll tell you. We'd rather lose a job than sell you one that doesn't make sense. That's how we still have customers from ten years ago.</p>
+          </div>
+        </details>
+        <details>
+          <summary>How do I drop it off?</summary>
+          <div class="answer">
+            <p>Pull in during business hours and we'll take a look right then. After-hours drop is fine too — call ahead, we'll tell you where to leave the keys.</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
 
   <section class="info-band">
     <div class="container">
-      <div class="section-head">
-        <h2 style="color: white;">Stop in or give us a ring</h2>
+      <div class="shop-head on-dark">
+        <div class="stencil">04 · Find us</div>
+        <h2>Stop in or give us a ring.</h2>
+        <span class="scrawl">11318 Tamarco Dr &mdash; Blue Ash, Ohio</span>
       </div>
-      <div class="info-cards">
-        <div class="info-card">
-          <h3>Call</h3>
-          <p class="big"><a href="tel:+15137954171">(513) 795-4171</a></p>
-          <p>Quickest way to reach us. We answer between jobs.</p>
+      <div class="find-grid">
+        <div class="info-grid">
+          <div class="item">
+            <div class="lbl">Call</div>
+            <div class="big"><a href="tel:+15137954171">(513) 795-4171</a></div>
+            <p>Quickest way to reach us. We answer between jobs.</p>
+          </div>
+          <div class="item">
+            <div class="lbl">Visit</div>
+            <div class="big"><a href="https://www.google.com/maps/search/?api=1&amp;query=Hyams+Auto+11318+Tamarco+Dr+Blue+Ash+OH+45242" target="_blank" rel="noopener">11318 Tamarco Dr</a></div>
+            <p>Blue Ash, OH 45242 · <a href="https://www.google.com/maps/dir/?api=1&amp;destination=11318+Tamarco+Dr+Blue+Ash+OH+45242" target="_blank" rel="noopener">Get directions</a></p>
+          </div>
+          <div class="item">
+            <div class="lbl">Email</div>
+            <div class="big" style="font-size: 1.5rem;"><a href="mailto:hyamsauto@gmail.com">hyamsauto@gmail.com</a></div>
+            <p>For quotes, photos, or non-urgent questions.</p>
+          </div>
+          <div class="item">
+            <div class="lbl">Hours</div>
+            <div class="big" style="font-size: 1.4rem;">Mon–Fri · 8a–5p</div>
+            <p>Sat by appointment · Sun closed</p>
+          </div>
         </div>
-        <div class="info-card">
-          <h3>Visit</h3>
-          <p class="big">11318 Tamarco Dr</p>
-          <p>Blue Ash, OH 45242</p>
-        </div>
-        <div class="info-card">
-          <h3>Hours</h3>
-          <p>Mon–Fri &nbsp; 8:00 AM – 5:00 PM<br>Sat &nbsp; By appointment<br>Sun &nbsp; Closed</p>
+        <div class="map-card">
+          <iframe
+            src="https://www.google.com/maps?q=Hyams+Auto+11318+Tamarco+Dr+Blue+Ash+OH+45242&amp;output=embed&amp;z=15"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            title="Map of Hyams Auto, 11318 Tamarco Dr, Blue Ash, OH"></iframe>
+          <a class="map-cta" href="https://www.google.com/maps/dir/?api=1&amp;destination=11318+Tamarco+Dr+Blue+Ash+OH+45242" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            Get directions
+          </a>
         </div>
       </div>
     </div>
@@ -205,11 +496,12 @@
 
   <section class="cta-strip">
     <div class="container">
-      <h2>Got something with a motor?</h2>
-      <p>Bring it by, give us a call, or send a note. We'll tell you straight what it needs.</p>
+      <span class="script">got something with a motor?</span>
+      <h2>Bring it by, give us a call.</h2>
+      <p>Tell us what you're hearing, seeing, or smelling. We'll tell you straight what it needs.</p>
       <div class="hero-actions" style="justify-content: center;">
-        <a class="btn btn-primary" style="background: var(--green-700); color: white;" href="tel:+15137954171">Call now</a>
-        <a class="btn btn-ghost" style="color: var(--green-800); border-color: var(--green-800);" href="/contact">Send a message</a>
+        <a class="btn btn-primary" href="tel:+15137954171">Call now</a>
+        <a class="btn btn-ghost" href="/contact">Send a message</a>
       </div>
     </div>
   </section>
@@ -225,12 +517,13 @@
       </div>
       <div>
         <h4>Visit</h4>
-        <p>11318 Tamarco Dr<br>Blue Ash, OH 45242</p>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Hyams+Auto+11318+Tamarco+Dr+Blue+Ash+OH+45242" target="_blank" rel="noopener">11318 Tamarco Dr<br>Blue Ash, OH 45242</a></p>
       </div>
       <div>
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:+15137954171">(513) 795-4171</a></li>
+          <li><a href="mailto:hyamsauto@gmail.com">hyamsauto@gmail.com</a></li>
           <li><a href="/contact">Send a message</a></li>
         </ul>
       </div>

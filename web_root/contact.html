@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0d2d18">
-  <title>Contact | Hyams Auto &amp; ...</title>
-  <meta name="description" content="Contact Hyams Auto in Blue Ash, OH. Call (513) 795-4171 or stop by 11318 Tamarco Dr.">
+  <title>Contact &amp; Book an Appointment | Hyams Auto &amp; ...</title>
+  <meta name="description" content="Request an appointment or send a message to Hyams Auto in Blue Ash, OH. Call (513) 795-4171 or stop by 11318 Tamarco Dr.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Big+Shoulders+Display:wght@700;800&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Caveat:wght@600;700&amp;family=Inter:wght@400;500;600;700&amp;family=Special+Elite&amp;display=swap">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
@@ -22,63 +22,172 @@
 
 <header class="site-header">
   <div class="container bar">
-    <a href="/" class="brand"><img src="/assets/hyams-logo.png" alt="Hyams Auto" width="200" height="104"></a>
+    <a href="/" class="brand" aria-label="Hyams Auto home"><img src="/assets/hyams-logo.png" alt="Hyams Auto" width="200" height="104"></a>
     <nav class="nav" aria-label="Primary">
       <a href="/">Home</a>
       <a href="/services">Services</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
     </nav>
-    <a href="tel:+15137954171" class="header-cta"><span aria-hidden="true">&#128222;</span> (513) 795-4171</a>
-    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <a href="tel:+15137954171" class="header-cta" aria-label="Call (513) 795-4171">
+      <svg class="svgi" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72a2 2 0 0 1 1.72 2z"/></svg>
+      <span class="cta-num">(513) 795-4171</span>
+    </a>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="svgi" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
   </div>
 </header>
 
 <main>
-  <section class="page-header">
+  <section class="page-header" style="--bg-photo: url('/assets/work/1937-cord.jpg');">
     <div class="container">
-      <div class="eyebrow" style="color: var(--green-300);">Get in touch</div>
-      <h1>Stop in or give us a call.</h1>
-      <p>Quickest way to reach us is the phone. We answer between jobs, and we'll save you a slot on the lift.</p>
+      <div class="eyebrow on-dark">Get in touch</div>
+      <h1>Book it. <span class="script">Or just ask.</span></h1>
+      <p>Quickest way to reach us is the phone — we answer between jobs. Prefer to type? Use the form. We'll call back to confirm your slot.</p>
     </div>
   </section>
+
+  <div class="hazard" aria-hidden="true"></div>
 
   <section>
     <div class="container">
       <div class="contact-grid">
         <div class="card">
-          <h3>How to reach us</h3>
-          <div class="row">
-            <div class="ico" aria-hidden="true">&#128222;</div>
-            <div><b>Phone</b><span><a href="tel:+15137954171">(513) 795-4171</a></span></div>
+          <div class="form-tabs" role="tablist" aria-label="Contact options">
+            <button class="form-tab is-active" role="tab" aria-selected="true" data-mode="appointment" id="tab-appointment">Request appointment</button>
+            <button class="form-tab" role="tab" aria-selected="false" data-mode="message" id="tab-message">Send a message</button>
           </div>
-          <div class="row">
-            <div class="ico" aria-hidden="true">&#128205;</div>
-            <div><b>Address</b><span>11318 Tamarco Dr<br>Blue Ash, OH 45242</span></div>
-          </div>
-          <div class="row">
-            <div class="ico" aria-hidden="true">&#128336;</div>
-            <div>
+
+          <form id="lead-form" class="lead-form" novalidate>
+            <input type="hidden" name="mode" value="appointment">
+            <!-- honeypot: real users won't fill this -->
+            <div class="hp-field" aria-hidden="true">
+              <label>Leave this empty <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="f-name">Your name <span class="req">*</span></label>
+                <input id="f-name" name="name" type="text" required autocomplete="name" maxlength="80">
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone <span class="req">*</span></label>
+                <input id="f-phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" maxlength="20" placeholder="(513) 555-0123">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-email">Email <span class="optional">(optional)</span></label>
+              <input id="f-email" name="email" type="email" autocomplete="email" maxlength="120">
+            </div>
+
+            <div class="appt-only">
+              <div class="field-row">
+                <div class="field field-sm">
+                  <label for="f-year">Year</label>
+                  <input id="f-year" name="vehicleYear" type="text" inputmode="numeric" maxlength="4" placeholder="2014">
+                </div>
+                <div class="field">
+                  <label for="f-make">Make</label>
+                  <input id="f-make" name="vehicleMake" type="text" maxlength="40" placeholder="Toyota">
+                </div>
+                <div class="field">
+                  <label for="f-model">Model</label>
+                  <input id="f-model" name="vehicleModel" type="text" maxlength="40" placeholder="Camry">
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="f-service">What needs doing?</label>
+                <select id="f-service" name="service">
+                  <option value="">Choose one (or pick "Not sure")</option>
+                  <option>Diagnostics / Check-engine light</option>
+                  <option>Oil change &amp; routine service</option>
+                  <option>Brakes</option>
+                  <option>Engine repair</option>
+                  <option>Transmission / drivetrain</option>
+                  <option>Heating &amp; A/C</option>
+                  <option>Electrical (battery, alternator, starter)</option>
+                  <option>Suspension &amp; steering / alignment</option>
+                  <option>Exhaust</option>
+                  <option>Pre-purchase inspection</option>
+                  <option>Truck / fleet</option>
+                  <option>Anything with a motor (something else)</option>
+                  <option>Not sure — please advise</option>
+                </select>
+              </div>
+
+              <div class="field-row">
+                <div class="field">
+                  <label for="f-date">Preferred drop-off date</label>
+                  <input id="f-date" name="preferredDate" type="date">
+                </div>
+                <div class="field">
+                  <label for="f-window">Time window</label>
+                  <select id="f-window" name="preferredWindow">
+                    <option value="">Any</option>
+                    <option>Morning (8a–11a)</option>
+                    <option>Midday (11a–2p)</option>
+                    <option>Afternoon (2p–5p)</option>
+                    <option>After-hours drop</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="f-alt-date">Alternate date <span class="optional">(optional)</span></label>
+                <input id="f-alt-date" name="altDate" type="date">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-notes"><span class="appt-only-inline">Symptoms, sounds, anything you've noticed</span><span class="msg-only-inline">Your message</span> <span class="req appt-only-inline">*</span></label>
+              <textarea id="f-notes" name="notes" rows="5" maxlength="2000" placeholder="It started making a clunk when I turn left, and the brake pedal feels soft."></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary form-submit">
+                <span class="btn-label">Send request</span>
+                <svg class="svgi spinner" viewBox="0 0 24 24" aria-hidden="true" style="display:none;"><path d="M12 2a10 10 0 1 0 10 10"/></svg>
+              </button>
+              <a href="tel:+15137954171" class="btn btn-ghost" style="color: var(--ink); border-color: var(--ink); box-shadow: 2px 2px 0 var(--ink);">Or call (513) 795-4171</a>
+            </div>
+
+            <p class="form-fineprint">We'll call you back to confirm. We don't share your info or send marketing.</p>
+
+            <div class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <div class="contact-side">
+          <div class="card">
+            <h3>How to reach us</h3>
+            <div class="row">
+              <b>Phone</b>
+              <span><a href="tel:+15137954171">(513) 795-4171</a></span>
+            </div>
+            <div class="row">
+              <b>Address</b>
+              <span>11318 Tamarco Dr<br>Blue Ash, OH 45242</span>
+            </div>
+            <div class="row">
               <b>Hours</b>
-              <span>
-                Mon–Fri &nbsp; 8:00 AM – 5:00 PM<br>
-                Sat &nbsp; By appointment<br>
-                Sun &nbsp; Closed
-              </span>
+              <span>Mon–Fri &nbsp; 8:00 AM – 5:00 PM<br>Sat &nbsp; By appointment<br>Sun &nbsp; Closed</span>
+            </div>
+            <div class="row">
+              <b>Pricing</b>
+              <span>$$ &middot; Honest quotes, nothing added you don't need</span>
             </div>
           </div>
-          <div class="row">
-            <div class="ico" aria-hidden="true">&#128176;</div>
-            <div><b>Pricing</b><span>$$ &middot; Honest quotes, nothing added that you don't need</span></div>
+          <div class="map">
+            <iframe
+              title="Map to Hyams Auto"
+              src="https://www.google.com/maps?q=11318+Tamarco+Dr,+Blue+Ash,+OH+45242&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
           </div>
-        </div>
-        <div class="map">
-          <iframe
-            title="Map to Hyams Auto"
-            src="https://www.google.com/maps?q=11318+Tamarco+Dr,+Blue+Ash,+OH+45242&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -86,10 +195,11 @@
 
   <section class="cta-strip">
     <div class="container">
-      <h2>Got something with a motor?</h2>
-      <p>Bring it by. We'll tell you straight what it needs.</p>
+      <span class="script">rather just talk to a human?</span>
+      <h2>Phone's the fastest way.</h2>
+      <p>We answer between jobs.</p>
       <div class="hero-actions" style="justify-content: center;">
-        <a class="btn btn-primary" style="background: var(--green-700); color: white;" href="tel:+15137954171">Call (513) 795-4171</a>
+        <a class="btn btn-primary" href="tel:+15137954171">Call (513) 795-4171</a>
       </div>
     </div>
   </section>
@@ -100,13 +210,34 @@
     <div class="grid">
       <div class="footer-brand">
         <img src="/assets/hyams-logo.png" alt="Hyams Auto">
-        <p style="margin-top: 14px;">A full automotive service specialist garage in Blue Ash, OH.</p>
+        <p style="margin-top: 14px;">A full automotive service specialist garage in Blue Ash, OH. If it's broke, we can fix it.</p>
       </div>
-      <div><h4>Visit</h4><p>11318 Tamarco Dr<br>Blue Ash, OH 45242</p></div>
-      <div><h4>Contact</h4><ul><li><a href="tel:+15137954171">(513) 795-4171</a></li><li><a href="/contact">Send a message</a></li></ul></div>
-      <div><h4>Site</h4><ul><li><a href="/">Home</a></li><li><a href="/services">Services</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div>
+        <h4>Visit</h4>
+        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Hyams+Auto+11318+Tamarco+Dr+Blue+Ash+OH+45242" target="_blank" rel="noopener">11318 Tamarco Dr<br>Blue Ash, OH 45242</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15137954171">(513) 795-4171</a></li>
+          <li><a href="mailto:hyamsauto@gmail.com">hyamsauto@gmail.com</a></li>
+          <li><a href="/contact">Send a message</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><div>&copy; <span id="year">2026</span> Hyams Auto.</div><div>Built for drivers in the Cincinnati area.</div></div>
+    <div class="footer-bottom">
+      <div>&copy; <span id="year">2026</span> Hyams Auto. All rights reserved.</div>
+      <div>Built for drivers in the Cincinnati area.</div>
+    </div>
   </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
