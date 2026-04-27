@@ -1236,6 +1236,94 @@ section.tight { padding: 56px 0; }
   font-size: 1.15rem; margin-top: 1em;
 }
 
+/* ABOUT — two-column layout (article + sticky rail) */
+.about-section { padding: clamp(56px, 8vw, 96px) 0; }
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(280px, 30%, 360px);
+  gap: clamp(40px, 6vw, 72px);
+  align-items: start;
+}
+.about-prose { margin: 0; max-width: 64ch; }
+.about-actions { margin-top: 2.4em; }
+.howard-inline { display: none; }
+
+.about-rail {
+  position: sticky; top: 104px;
+  display: flex; flex-direction: column; gap: 28px;
+}
+.about-rail .howard-card {
+  margin: 0;
+  transform: rotate(-1.6deg);
+  max-width: 100%;
+}
+.about-rail .howard-card:hover { transform: rotate(0) translateY(-3px); }
+
+.stat-card {
+  background: var(--paper-2);
+  border: 2px solid var(--ink);
+  padding: 22px 24px;
+  display: grid; gap: 16px;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.stat-card .stat {
+  display: grid; grid-template-columns: auto 1fr;
+  align-items: baseline; gap: 14px;
+  border-bottom: 1px dashed rgba(22, 22, 22, .25);
+  padding-bottom: 14px;
+}
+.stat-card .stat:last-child { border-bottom: 0; padding-bottom: 0; }
+.stat-card .num {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.9rem; line-height: 1;
+  color: var(--oxblood);
+  letter-spacing: .01em;
+}
+.stat-card .lbl {
+  font-family: 'Anton', sans-serif;
+  font-size: .82rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink);
+}
+
+.rail-card {
+  background: var(--asphalt); color: var(--paper);
+  border: 2px solid var(--ink);
+  padding: 24px;
+  box-shadow: 6px 6px 0 var(--gold);
+  position: relative;
+}
+.rail-card .rail-eyebrow {
+  font-family: 'Anton', sans-serif;
+  font-size: .8rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.rail-card .rail-big {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.35rem; line-height: 1.15;
+  margin: 0 0 12px;
+  color: var(--paper);
+}
+.rail-card .rail-meta {
+  margin: 0 0 18px;
+  color: rgba(244, 239, 225, .82);
+  font-size: .98rem; line-height: 1.4;
+}
+.rail-card .rail-btn { width: 100%; text-align: center; }
+
+@media (max-width: 900px) {
+  .about-layout { grid-template-columns: 1fr; gap: 40px; }
+  .about-rail { position: static; gap: 24px; }
+  .about-rail .howard-card { display: none; }
+  .howard-inline.work-card {
+    display: block;
+    max-width: 320px;
+    margin: 2em auto;
+    transform: rotate(-1.2deg);
+  }
+  .howard-inline.work-card:hover { transform: rotate(0) translateY(-3px); }
+}
+
 /* PROSE (about, etc.) */
 .prose { max-width: 70ch; margin: 0 auto; font-size: 1.08rem; }
 .prose h2 {
@@ -1610,9 +1698,132 @@ section.tight { padding: 56px 0; }
   .reviews-carousel .rc-sort-btn { padding: 7px 10px; }
 }
 
+/* AUDIENCE TRIO — three-up callout on the home page */
+.audience-trio { padding-top: clamp(48px, 6vw, 72px); padding-bottom: clamp(40px, 5vw, 60px); }
+.trio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(18px, 2.4vw, 28px);
+}
+.trio-card {
+  display: flex; flex-direction: column;
+  background: var(--paper-2);
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--ink);
+  padding: clamp(22px, 2.6vw, 32px);
+  color: var(--ink);
+  text-decoration: none;
+  position: relative;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.trio-card:hover {
+  text-decoration: none;
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--oxblood);
+  color: var(--ink);
+}
+.trio-card:nth-child(1) { transform: rotate(-.4deg); }
+.trio-card:nth-child(2) { transform: rotate(.3deg); }
+.trio-card:nth-child(3) { transform: rotate(-.2deg); }
+.trio-card:nth-child(1):hover,
+.trio-card:nth-child(2):hover,
+.trio-card:nth-child(3):hover { transform: rotate(0) translate(-2px, -2px); }
+.trio-num {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.4rem; line-height: 1;
+  color: var(--gold);
+  -webkit-text-stroke: 1.5px var(--ink);
+  letter-spacing: .04em;
+  margin-bottom: 10px;
+}
+.trio-card h3 {
+  font-family: 'Anton', sans-serif; text-transform: uppercase;
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem); letter-spacing: .02em;
+  margin: 0 0 10px;
+}
+.trio-card p {
+  margin: 0 0 18px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  flex: 1;
+}
+.trio-link {
+  font-family: 'Caveat', cursive; font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--oxblood);
+  display: inline-block;
+  transform: rotate(-.6deg);
+}
+.trio-card:hover .trio-link { color: var(--oxblood-700); }
+
+/* SERVICE PAGE STICKY SUB-NAV */
+.svc-subnav {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--asphalt);
+  border-bottom: 2px solid var(--ink);
+  box-shadow: 0 3px 0 var(--gold);
+}
+.svc-subnav .container {
+  display: flex; flex-wrap: wrap;
+  gap: clamp(8px, 1.5vw, 18px);
+  padding-top: 10px; padding-bottom: 10px;
+}
+.svc-subnav a {
+  font-family: 'Anton', sans-serif; text-transform: uppercase;
+  letter-spacing: .12em; font-size: .92rem;
+  color: var(--paper);
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.svc-subnav a:hover {
+  color: var(--gold-300);
+  border-color: var(--gold);
+  text-decoration: none;
+}
+
+/* AUDIENCE TRACKS — anchored sections on services page */
+.audience-track { padding-top: clamp(48px, 6vw, 80px); padding-bottom: clamp(48px, 6vw, 80px); scroll-margin-top: 70px; }
+.audience-track--alt { background: var(--paper-2); border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+.track-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(16px, 2vw, 24px);
+}
+.track-card {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  padding: clamp(18px, 2.2vw, 26px);
+}
+.audience-track--alt .track-card { background: var(--paper); }
+.track-card h3 {
+  font-family: 'Anton', sans-serif; text-transform: uppercase;
+  font-size: clamp(1.2rem, 2vw, 1.5rem); letter-spacing: .02em;
+  margin: 0 0 8px;
+}
+.track-card p { margin: 0; color: var(--ink-2); line-height: 1.55; }
+.track-note { margin-top: 22px; }
+.track-note .scrawl {
+  font-family: 'Caveat', cursive; font-weight: 700;
+  font-size: 1.3rem; color: var(--oxblood);
+  display: inline-block; transform: rotate(-.6deg);
+}
+
+@media (max-width: 880px) {
+  .trio-grid { grid-template-columns: 1fr; }
+  .trio-card:nth-child(1),
+  .trio-card:nth-child(2),
+  .trio-card:nth-child(3) { transform: none; }
+  .track-grid { grid-template-columns: 1fr; }
+  .svc-subnav .container { gap: 6px; }
+  .svc-subnav a { font-size: .82rem; padding: 5px 8px; letter-spacing: .08em; }
+}
+
 /* MOTION */
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
   .work-card, .work-card:nth-child(n), .meet .photo, .split .visual { transform: none !important; }
+  .trio-card, .trio-card:nth-child(n) { transform: none !important; }
   html { scroll-behavior: auto; }
 }
