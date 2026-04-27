@@ -150,15 +150,153 @@
     </div>
   </section>
 
-  <section class="pullquote" aria-label="Customer review">
+  <section class="pullquote" aria-label="Customer reviews">
     <div class="container">
-      <div class="note">
-        <blockquote>Honest pricing. They told me a repair I thought I needed actually didn't — saved me $400.</blockquote>
-        <div class="sig">
-          <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-          <span><strong>— Sarah K.</strong>, Montgomery</span>
-          <span class="source">/ via Facebook</span>
+      <div class="shop-head on-dark" style="margin-bottom: 40px;">
+        <div class="stencil">— from the wall —</div>
+        <h2>What folks are saying.</h2>
+      </div>
+      <div class="reviews-carousel" data-reviews>
+
+        <div class="rc-toolbar">
+          <div class="rc-toolbar-row rc-toolbar-row--top">
+            <div class="rc-search">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="rc-search-icon">
+                <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M20 20l-3.5-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <input type="search" placeholder="Search reviews…" data-rc-search aria-label="Search reviews">
+            </div>
+            <div class="rc-sort" data-rc-sort-root>
+              <button class="rc-sort-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Sort reviews" data-rc-sort-btn>
+                <svg class="rc-sort-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 4v16M7 20l-3-3M7 20l3-3M17 20V4M17 4l-3 3M17 4l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="rc-sort-label" data-rc-sort-label>Featured</span>
+                <svg class="rc-sort-caret" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <ul class="rc-sort-menu" role="listbox" aria-label="Sort by" data-rc-sort-menu hidden>
+                <li role="option" data-rc-sort-opt="featured" aria-selected="true">
+                  <span class="rc-opt-icon">
+                    <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 1.5l1.94 4.6 4.96.42-3.77 3.27 1.13 4.86L9 12.13 4.74 14.65l1.13-4.86L2.1 6.52l4.96-.42L9 1.5z" fill="currentColor"/></svg>
+                  </span>
+                  Featured
+                </li>
+                <li role="option" data-rc-sort-opt="newest" aria-selected="false">
+                  <span class="rc-opt-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                  </span>
+                  Newest first
+                </li>
+                <li role="option" data-rc-sort-opt="oldest" aria-selected="false">
+                  <span class="rc-opt-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v6l-4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+                  </span>
+                  Oldest first
+                </li>
+                <li role="option" data-rc-sort-opt="name" aria-selected="false">
+                  <span class="rc-opt-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h11M5 12h11M5 18h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 8V20M19 20l-2-2M19 20l2-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </span>
+                  By name (A–Z)
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="rc-chips" role="tablist" aria-label="Filter by source">
+            <button type="button" class="rc-chip is-active" data-rc-filter="all" role="tab" aria-selected="true" aria-label="All reviews">
+              <svg class="rc-brand rc-brand-all" viewBox="0 0 18 18" aria-hidden="true">
+                <path d="M9 1.5l1.94 4.6 4.96.42-3.77 3.27 1.13 4.86L9 12.13 4.74 14.65l1.13-4.86L2.1 6.52l4.96-.42L9 1.5z" fill="currentColor"/>
+              </svg>
+              <span>All</span><em data-rc-count="all"></em>
+            </button>
+            <button type="button" class="rc-chip" data-rc-filter="google" role="tab" aria-selected="false">
+              <svg class="rc-brand" viewBox="0 0 18 18" aria-hidden="true">
+                <path d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.71v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.61z" fill="#4285f4"/>
+                <path d="M9 18c2.43 0 4.47-.81 5.96-2.18l-2.92-2.26c-.8.54-1.83.86-3.04.86-2.34 0-4.32-1.58-5.03-3.71H.96v2.33A9 9 0 0 0 9 18z" fill="#34a853"/>
+                <path d="M3.97 10.71A5.41 5.41 0 0 1 3.68 9c0-.59.1-1.17.29-1.71V4.96H.96A9 9 0 0 0 0 9c0 1.45.35 2.82.96 4.04l3.01-2.33z" fill="#fbbc05"/>
+                <path d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58A9 9 0 0 0 9 0 9 9 0 0 0 .96 4.96l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z" fill="#ea4335"/>
+              </svg>
+              <span>Google</span><em data-rc-count="google"></em>
+            </button>
+            <button type="button" class="rc-chip" data-rc-filter="facebook" role="tab" aria-selected="false">
+              <svg class="rc-brand" viewBox="0 0 18 18" aria-hidden="true">
+                <path d="M18 9a9 9 0 1 0-10.4 8.89v-6.29H5.31V9h2.29V7.01c0-2.27 1.35-3.52 3.41-3.52.99 0 2.02.18 2.02.18v2.22h-1.14c-1.12 0-1.47.7-1.47 1.41V9h2.5l-.4 2.6h-2.1v6.29A9 9 0 0 0 18 9z" fill="#1877f2"/>
+              </svg>
+              <span>Facebook</span><em data-rc-count="facebook"></em>
+            </button>
+          </div>
         </div>
+
+        <button class="rc-btn rc-prev" type="button" aria-label="Previous reviews">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <script type="application/json" data-rc-data>
+[
+  {"source":"google","name":"Valerie Butler","date":"2025-12-27","text":"Charlie and crew do outstanding work. I have a 2011 Santa Fe SUV and they did a great job doing maintenance on the ole girl. She runs great. He put in a new alternator, did an oil change, checked my brakes, and swapped out some worn out parts. Reasonable price."},
+  {"source":"google","name":"Steve Jones","date":"2025-08-27","text":"I have been using Charlie's services since he started his business — for my fleet of company vehicles and my personal vehicles too. He has always exceeded my every expectation and saved me so much money over his competitors. His integrity is beyond question. I like doing business with people like that!"},
+  {"source":"google","name":"E DU","date":"2025-11-27","text":"We've had our cars serviced here since it opened. They provide good work at honest costs. Reasonable price."},
+  {"source":"google","name":"Ryan Hess","date":"2025-08-27","text":"Great service and very friendly! We were in Cincinnati from out of town and needed a new caliper — they were able to fix it that afternoon, which made our trip so much better. I would highly recommend them!"},
+  {"source":"google","name":"Douglas Meyer","date":"2025-04-27","text":"The best in the business. Charlie is smart, honest, and dependable. I have taken many cars to him and always the same great service — over a 15 year time period! Thanks Charlie for saving me thousands of dollars."},
+  {"source":"google","name":"Jason Abbott","date":"2025-04-27","text":"Highly recommend Hyams Automotive. Charlie and his team are honest and do great work. I've been using them since 2016. You won't be disappointed!"},
+  {"source":"google","name":"Joseph Tomasulo","date":"2024-04-27","text":"Charlie has been my personal mechanic since 2013 when I first met him. He did something that demonstrated honesty and integrity when he could've easily done otherwise."},
+  {"source":"google","name":"Jasmin Cooper","date":"2023-04-27","text":"I've known Charlie for more than 20 years, and thankfully nothing has changed other than possibly our amount of grey hairs! Charlie is still incredibly knowledgeable, honest, fair, and communicates everything up front so you have zero surprises."},
+  {"source":"google","name":"Matthew Gunter","date":"2025-04-27","text":"I don't really give good reviews because I usually want to keep the good ones to myself. But we've been doing business with Charlie for 15 years. We love him and we consider him a friend. Nothing like having good trustworthy people in your life."},
+  {"source":"google","name":"Steve Mann","date":"2026-02-27","text":"Honest, reliable service at a fair price."},
+  {"source":"google","name":"Rebekah Root","date":"2023-04-27","text":"Amazing experience!! Took my car in with multiple issues. The problem was a little bigger than we initially suspected and even though he couldn't fix it, he referred me to several people who he knew could — and didn't even charge me."},
+  {"source":"google","name":"Adam Webb","date":"2024-04-27","text":"Excellent and friendly service. This was the first time I've been to a mechanic and I've not felt like I was getting scammed. Truly an honest owner, great business, and they fixed all the issues I had with my vehicle. Will be returning here for all my future car-related problems."},
+  {"source":"google","name":"Matthew Reinhold","date":"2024-04-27","text":"I had a potentially big issue with my car, so I dropped it off at Hyams Auto. I also had the team take a look at a few other issues. The next morning, I received a call and we walked through each potential issue."},
+  {"source":"google","name":"Michael B","date":"2021-04-27","text":"I've been taking my SUV to Hyams for almost 2 years. I live in Indianapolis now, but I still wait until I'm back in Blue Ash to get work done. He's that good. Charlie is honest and incredibly knowledgeable, and that's all you'll ever need in a great mechanic."},
+  {"source":"google","name":"Kaycee Roberts","date":"2022-04-27","text":"I found myself 6 hours from home on a road trip with an SUV trunk that would not close or latch. In a panic, I reached out to Hyams. Despite their busy schedule, they fit me in immediately, solved the problem, and had me back on the road."},
+  {"source":"google","name":"Charles Boegli","date":"2018-04-27","text":"Charlie Hyams is an honest and knowledgeable mechanic. His shop is not fancy, but they do good work at good prices."},
+  {"source":"google","name":"Dimitry Lebedev","date":"2019-04-27","text":"First time at this shop and had a great experience. Very personable service. Charlie knows what he is doing and is not trying to scam you on the parts, like most current shops are."},
+  {"source":"google","name":"C.K. Austin","date":"2023-04-27","text":"Charlie is awesome! He replaced my engine and worked with my insurance company to get it done! My car runs again and I'm excited!"},
+  {"source":"google","name":"Shah Nawaz","date":"2022-04-27","text":"I have a Mercedes with a check-engine light, and sometimes the airflow was not good. Got the check-engine light fixed with a reasonable charge. Strongly recommend Hyams Auto repairs."},
+  {"source":"google","name":"Ed Smithson","date":"2024-04-27","text":"Charlie and his staff were top notch. They were very knowledgeable and spent time explaining things. Highly recommended."},
+  {"source":"google","name":"Jack Brendamour","date":"2017-04-27","text":"Charlie is extremely creative when it comes to almost any situation. If he can't handle a certain task, he will point you in the right direction. A+ all around. Solid guy and solid company."},
+  {"source":"google","name":"Carl Zimpelman","date":"2024-04-27","text":"Worked with Charlie. Great guy to work with and work for. Very fair and honest — he won't tell you something you don't need. Five stars!!!"},
+  {"source":"google","name":"Berry Gilmore","date":"2022-04-27","text":"Always excellent service at reasonable prices. Hyams works on every car we own. Highly recommend this repair shop."},
+  {"source":"google","name":"Gyanmarco Flores","date":"2023-04-27","text":"Have been going there for many years and cannot compare with the service and honesty they provide, where others have scammed me out of thousands. They were really honest and gave me a lot of tips. Really trust them with my vehicles."},
+  {"source":"google","name":"David Morrical","date":"2021-04-27","text":"Charlie is a good guy — known him for some time when he managed another shop. Does good work at reasonable prices."},
+  {"source":"google","name":"Shaun Pitzer","date":"2022-04-27","text":"Fantastic. Great work for a reasonable price. Confident the work was done right, works to minimize downtime, very personable. Extremely knowledgeable."},
+  {"source":"google","name":"Carvinski Garrett","date":"2021-04-27","text":"Got me in and out! Very cool, down to earth — him and his crew. I would highly recommend coming here with any car or truck troubles!"},
+  {"source":"google","name":"Carolyn Hensley","date":"2021-04-27","text":"Very nice and honest place to have car repairs done. Worked on my uncle's '65 Mustang and always did a great job!"},
+  {"source":"google","name":"Darrell Radin","date":"2024-04-27","text":"Best mechanic in town with incredible value and personal service beyond what anyone else offers."},
+  {"source":"google","name":"Troix Alan","date":"2021-04-27","text":"I've been dealing with Hyams for years and EVERYTHING about this organization is top notch. Once you experience this service operation, you won't go elsewhere."},
+  {"source":"google","name":"Faris Siddiqui","date":"2017-04-27","text":"Outstanding and quality service. Please be patient with Charlie — he will get it done the right way."},
+  {"source":"google","name":"Ollokot Xios","date":"2023-04-27","text":"Knowledgeable, respectful, fair prices. He will treat you and your car right."},
+  {"source":"google","name":"Kenton Waldroup","date":"2023-04-27","text":"Great communication! Didn't overcharge me and was very helpful and informative!"},
+  {"source":"google","name":"Ahmad Hamdan","date":"2024-04-27","text":"Great shop and Charles was extra helpful and kind."},
+  {"source":"google","name":"Michael Stewart","date":"2019-04-27","text":"Good shop. Took care of me on short notice at a reasonable price."},
+  {"source":"google","name":"Mitchell Ray","date":"2025-04-27","text":"Excellent service, very friendly and knowledgeable."},
+  {"source":"google","name":"John Rengers","date":"2018-04-27","text":"Great knowledgeable man owns the place. Great guy, honest and fair."},
+  {"source":"google","name":"moebnet","date":"2017-04-27","text":"Never had a mechanic work so hard to get it right — and even harder to keep the cost down."},
+  {"source":"google","name":"Bud Wendel","date":"2025-10-27","text":"Best mechanic that I have found in 34 years. Great price."},
+  {"source":"google","name":"Mo Jo","date":"2019-04-27","text":"Great guy. He knows how to fix automobiles."},
+  {"source":"google","name":"Craig Gerber","date":"2021-04-27","text":"Thanks for fixing our truck and waiting for us to come get it."},
+  {"source":"google","name":"Matt Williams","date":"2020-04-27","text":"Charlie is the best. Period."},
+  {"source":"google","name":"Thomas Eliopulos","date":"2021-04-27","text":"Absolutely the best! Charlie Hyams."},
+  {"source":"google","name":"Ivonne Morales","date":"2020-04-27","text":"The best service you can find!"},
+  {"source":"google","name":"Griffin Idk","date":"2023-04-27","text":"He gets it done fast."},
+  {"source":"google","name":"osamu mukuda","date":"2024-04-27","text":"Excellent job."},
+  {"source":"google","name":"Stephen Boykin","date":"2018-04-27","text":"Exceptional."},
+  {"source":"google","name":"Brittany Couch","date":"2026-03-27","text":"The only shop my family will take our vehicles to. Great price."},
+  {"source":"facebook","name":"Eron Walton","date":"2024-08-01","text":"Only place in Cincinnati I'd take my vehicles. The honesty that was given is what made my experience so much better than any of my previous experiences with other shops."},
+  {"source":"facebook","name":"Peter Lovaas","date":"2024-06-15","text":"Brilliant mechanic, honest pricing, and always works with my schedule to reduce the stress of being out a car. Having found these guys has given me some serious peace of mind anytime something comes up."},
+  {"source":"facebook","name":"Ami Couck","date":"2024-05-20","text":"The best auto repair in the city. Honest and knows everything about cars. I would not take my car anywhere else."},
+  {"source":"facebook","name":"Heather Tome","date":"2024-09-10","text":"Best mechanic around. Total lifesaver! Does awesome work, answers all questions and doesn't overcharge or try to sell you on work you don't need. Can't recommend Charlie and his shop enough."},
+  {"source":"facebook","name":"Ryan Motley","date":"2024-07-05","text":"Charlie is an awesome guy! Very intelligent, always honest and explains the situation clearly. I moved away and I still always make the drive to bring my car back to him to be repaired. Highly recommended!!"}
+]
+        </script>
+        <div class="rc-track" role="region" aria-label="Customer reviews" tabindex="0">
+          <p class="rc-empty" data-rc-empty hidden>No reviews match — try clearing the search.</p>
+        </div>
+        <button class="rc-btn rc-next" type="button" aria-label="Next reviews">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="rc-dots" data-rc-dots aria-hidden="true"></div>
       </div>
     </div>
   </section>
