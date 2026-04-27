@@ -1,0 +1,10 @@
+{
+  "name": "hyams-auto-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "process-logo": "python scripts/process-logo.py",
+    "serve": "firebase emulators:start --only hosting",
+    "deploy": "firebase deploy --only hosting"
+  }
+}

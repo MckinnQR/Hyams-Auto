@@ -1,0 +1,19 @@
+{
+  "name": "Hyams Auto",
+  "short_name": "Hyams Auto",
+  "description": "Full automotive service specialist garage in Blue Ash, OH. If it's broke, we can fix it.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f8f5ee",
+  "theme_color": "#0d2d18",
+  "lang": "en",
+  "categories": ["business", "automotive"],
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

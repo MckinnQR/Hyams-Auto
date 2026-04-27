@@ -1,0 +1,7 @@
+# robots.txt for Hyams Auto
+# https://hyamsauto.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://hyamsauto.com/sitemap.xml
