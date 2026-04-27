@@ -15,7 +15,7 @@ from PIL import Image
 from rembg import remove
 
 ROOT = Path(__file__).resolve().parents[1]
-SRC = Path(r"C:\Users\itsqd\Attuned Ventures\Hyams.png")
+SRC = ROOT / "scripts" / "source" / "Hyams.png"
 OUT = ROOT / "web_root" / "assets"
 OUT.mkdir(parents=True, exist_ok=True)
 
